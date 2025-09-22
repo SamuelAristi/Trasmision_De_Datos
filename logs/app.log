@@ -1,0 +1,438 @@
+2025-09-21 17:40:57 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 17:40:57 | INFO     | src.database.connection:_initialize_engine:38 - Database engine initialized successfully
+2025-09-21 17:40:58 | INFO     | __main__:main:18 - Starting data cleaning application
+2025-09-21 17:40:58 | INFO     | src.database.connection:test_connection:87 - Database connection test successful
+2025-09-21 17:40:58 | INFO     | __main__:main:26 - Database connection successful
+2025-09-21 17:40:58 | INFO     | __main__:main:32 - Generating data quality report...
+2025-09-21 17:40:58 | ERROR    | src.database.connection:get_connection:58 - Database connection error: no existe la columna «id»
+LINE 1: SELECT * FROM orders ORDER BY id
+                                      ^
+
+2025-09-21 17:40:58 | ERROR    | src.database.connection:execute_query:102 - Query execution failed: no existe la columna «id»
+LINE 1: SELECT * FROM orders ORDER BY id
+                                      ^
+
+2025-09-21 17:40:58 | ERROR    | src.services.order_service:get_all_orders:26 - Failed to retrieve orders: no existe la columna «id»
+LINE 1: SELECT * FROM orders ORDER BY id
+                                      ^
+
+2025-09-21 17:40:58 | ERROR    | src.services.order_service:get_orders_dataframe:48 - Failed to create DataFrame: no existe la columna «id»
+LINE 1: SELECT * FROM orders ORDER BY id
+                                      ^
+
+2025-09-21 17:40:58 | ERROR    | src.services.order_service:get_data_quality_report:298 - Failed to generate data quality report: no existe la columna «id»
+LINE 1: SELECT * FROM orders ORDER BY id
+                                      ^
+
+2025-09-21 17:40:58 | ERROR    | __main__:main:96 - Application error: no existe la columna «id»
+LINE 1: SELECT * FROM orders ORDER BY id
+                                      ^
+
+2025-09-21 17:41:16 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 17:41:16 | INFO     | src.database.connection:_initialize_engine:38 - Database engine initialized successfully
+2025-09-21 17:41:17 | INFO     | __main__:main:18 - Starting data cleaning application
+2025-09-21 17:41:17 | INFO     | src.database.connection:test_connection:87 - Database connection test successful
+2025-09-21 17:41:17 | INFO     | __main__:main:26 - Database connection successful
+2025-09-21 17:41:17 | INFO     | __main__:main:32 - Generating data quality report...
+2025-09-21 17:41:17 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:41:17 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:41:17 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 17:41:17 | INFO     | __main__:main:63 - Starting data cleaning operations...
+2025-09-21 17:41:17 | INFO     | __main__:main:66 - Checking for duplicate orders...
+2025-09-21 17:41:17 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:41:17 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:41:17 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 17:41:17 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 17:41:17 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 17:41:17 | INFO     | __main__:main:74 - Checking for incomplete records...
+2025-09-21 17:41:17 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:41:17 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:41:17 | INFO     | __main__:main:86 - Validating data types...
+2025-09-21 17:41:18 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:41:18 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:41:18 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 17:41:18 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4907 extreme shipping_cost values (>1000)
+2025-09-21 17:41:18 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5499 invalid status values
+2025-09-21 17:41:18 | INFO     | __main__:main:93 - Data cleaning operations completed successfully
+2025-09-21 17:42:11 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 17:42:11 | INFO     | src.database.connection:_initialize_engine:38 - Database engine initialized successfully
+2025-09-21 17:42:12 | INFO     | __main__:main:18 - Starting data cleaning application
+2025-09-21 17:42:12 | INFO     | src.database.connection:test_connection:87 - Database connection test successful
+2025-09-21 17:42:12 | INFO     | __main__:main:26 - Database connection successful
+2025-09-21 17:42:12 | INFO     | __main__:main:32 - Generating data quality report...
+2025-09-21 17:42:12 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:42:12 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:42:12 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 17:42:12 | INFO     | __main__:main:63 - Starting data cleaning operations...
+2025-09-21 17:42:12 | INFO     | __main__:main:66 - Checking for duplicate orders...
+2025-09-21 17:42:12 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:42:12 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:42:12 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 17:42:12 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 17:42:12 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 17:42:12 | INFO     | __main__:main:74 - Checking for incomplete records...
+2025-09-21 17:42:13 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:42:13 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:42:13 | INFO     | __main__:main:86 - Validating data types...
+2025-09-21 17:42:13 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:42:13 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:42:13 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 17:42:13 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4907 extreme shipping_cost values (>1000)
+2025-09-21 17:42:13 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5499 invalid status values
+2025-09-21 17:42:13 | INFO     | __main__:main:93 - Data cleaning operations completed successfully
+2025-09-21 17:42:45 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 17:42:46 | INFO     | src.database.connection:test_connection:87 - Database connection test successful
+2025-09-21 17:42:55 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 17:42:55 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:42:55 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:43:04 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 17:43:05 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:43:05 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:43:05 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:43:05 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:43:05 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 17:43:14 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 17:43:34 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 17:43:34 | INFO     | src.database.connection:_initialize_engine:38 - Database engine initialized successfully
+2025-09-21 17:43:35 | INFO     | __main__:main:18 - Starting data cleaning application
+2025-09-21 17:43:35 | INFO     | src.database.connection:test_connection:87 - Database connection test successful
+2025-09-21 17:43:35 | INFO     | __main__:main:26 - Database connection successful
+2025-09-21 17:43:35 | INFO     | __main__:main:32 - Generating data quality report...
+2025-09-21 17:43:35 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:43:35 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:43:35 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 17:43:35 | INFO     | __main__:main:63 - Starting data cleaning operations...
+2025-09-21 17:43:35 | INFO     | __main__:main:66 - Checking for duplicate orders...
+2025-09-21 17:43:35 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:43:35 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:43:35 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 17:43:35 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 17:43:35 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 17:43:35 | INFO     | __main__:main:74 - Checking for incomplete records...
+2025-09-21 17:43:36 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:43:36 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:43:36 | INFO     | __main__:main:86 - Validating data types...
+2025-09-21 17:43:36 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:43:36 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:43:36 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 17:43:36 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4907 extreme shipping_cost values (>1000)
+2025-09-21 17:43:36 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5499 invalid status values
+2025-09-21 17:43:36 | INFO     | __main__:main:93 - Data cleaning operations completed successfully
+2025-09-21 17:44:00 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 17:44:00 | INFO     | src.database.connection:test_connection:87 - Database connection test successful
+2025-09-21 17:44:00 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:44:00 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:44:00 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 17:44:01 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:44:01 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:44:01 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 17:44:01 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 17:44:01 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 17:44:01 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:44:01 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:44:01 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 17:44:01 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 17:44:01 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 17:44:01 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4907 extreme shipping_cost values (>1000)
+2025-09-21 17:44:01 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5499 invalid status values
+2025-09-21 18:02:49 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:02:50 | INFO     | src.database.connection:_initialize_engine:38 - Database engine initialized successfully
+2025-09-21 18:02:50 | INFO     | __main__:main:18 - Starting data cleaning application
+2025-09-21 18:02:50 | INFO     | src.database.connection:test_connection:87 - Database connection test successful
+2025-09-21 18:02:50 | INFO     | __main__:main:26 - Database connection successful
+2025-09-21 18:02:50 | INFO     | __main__:main:32 - Generating data quality report...
+2025-09-21 18:02:50 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 18:02:50 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 18:02:50 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 18:02:50 | INFO     | __main__:main:63 - Starting data cleaning operations...
+2025-09-21 18:02:50 | INFO     | __main__:main:66 - Checking for duplicate orders...
+2025-09-21 18:02:50 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 18:02:50 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 18:02:50 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 18:02:50 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 18:02:50 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 18:02:50 | INFO     | __main__:main:74 - Checking for incomplete records...
+2025-09-21 18:02:50 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 18:02:50 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 18:02:50 | INFO     | __main__:main:86 - Validating data types...
+2025-09-21 18:02:50 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 18:02:50 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 18:02:50 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 18:02:50 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4907 extreme shipping_cost values (>1000)
+2025-09-21 18:02:50 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5499 invalid status values
+2025-09-21 18:02:50 | INFO     | __main__:main:93 - Data cleaning operations completed successfully
+2025-09-21 18:04:10 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:04:12 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:07:01 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 18:07:01 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 18:07:01 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 18:07:01 | ERROR    | web_app:data_quality_report:90 - Error getting data quality report: Object of type ObjectDType is not JSON serializable
+2025-09-21 18:07:07 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 18:07:07 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 18:07:07 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 18:07:07 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 18:07:07 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 18:07:07 | ERROR    | web_app:check_duplicates:105 - Error checking duplicates: Object of type int64 is not JSON serializable
+2025-09-21 18:07:12 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 18:07:12 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 18:07:14 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 18:07:14 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 18:07:14 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 18:07:14 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4907 extreme shipping_cost values (>1000)
+2025-09-21 18:07:14 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5499 invalid status values
+2025-09-21 18:07:14 | ERROR    | web_app:validate_data:136 - Error validating data: Object of type int64 is not JSON serializable
+2025-09-21 18:07:55 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:09:20 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 18:09:20 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 18:09:20 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 18:09:20 | ERROR    | web_app:data_quality_report:90 - Error getting data quality report: Object of type ObjectDType is not JSON serializable
+2025-09-21 18:09:42 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 18:09:42 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 18:09:43 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 18:09:43 | ERROR    | web_app:data_quality_report:90 - Error getting data quality report: Object of type ObjectDType is not JSON serializable
+2025-09-21 18:09:45 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 18:09:45 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 18:09:45 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 18:09:45 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4907 extreme shipping_cost values (>1000)
+2025-09-21 18:09:45 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5499 invalid status values
+2025-09-21 18:09:45 | ERROR    | web_app:validate_data:136 - Error validating data: Object of type int64 is not JSON serializable
+2025-09-21 18:09:46 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 18:09:46 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 18:09:47 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5499 orders from database
+2025-09-21 18:09:47 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5499 rows and 10 columns
+2025-09-21 18:09:47 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 18:09:47 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 18:09:47 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 18:09:47 | ERROR    | web_app:check_duplicates:105 - Error checking duplicates: Object of type int64 is not JSON serializable
+2025-09-21 18:20:21 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:20:25 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:20:29 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:20:55 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:23:05 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:23:07 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:23:38 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:23:38 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:24:57 | INFO     | web_app:create_order:404 - New order 59974 created successfully
+2025-09-21 18:31:29 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5500 orders from database
+2025-09-21 18:31:43 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:31:43 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:31:56 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:31:56 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:32:22 | INFO     | web_app:create_order:404 - New order 59975 created successfully
+2025-09-21 18:32:38 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:32:38 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:32:40 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:32:40 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:32:40 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 18:32:40 | ERROR    | web_app:data_quality_report:103 - Error getting data quality report: Object of type ObjectDType is not JSON serializable
+2025-09-21 18:33:00 | INFO     | web_app:update_order:352 - Order 59974 updated successfully
+2025-09-21 18:33:02 | INFO     | web_app:update_order:352 - Order 59974 updated successfully
+2025-09-21 18:33:04 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:33:04 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:33:04 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 18:33:04 | ERROR    | web_app:data_quality_report:103 - Error getting data quality report: Object of type ObjectDType is not JSON serializable
+2025-09-21 18:33:07 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:33:07 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:33:07 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 18:33:07 | ERROR    | web_app:data_quality_report:103 - Error getting data quality report: Object of type ObjectDType is not JSON serializable
+2025-09-21 18:33:08 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:33:08 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:33:08 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 18:33:08 | ERROR    | web_app:data_quality_report:103 - Error getting data quality report: Object of type ObjectDType is not JSON serializable
+2025-09-21 18:33:11 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:33:11 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:34:33 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:34:33 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:34:33 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 18:34:33 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 18:34:33 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 18:34:33 | ERROR    | web_app:check_duplicates:118 - Error checking duplicates: Object of type int64 is not JSON serializable
+2025-09-21 18:34:35 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:34:35 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:34:37 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:34:37 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:34:37 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 18:34:37 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4908 extreme shipping_cost values (>1000)
+2025-09-21 18:34:37 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5501 invalid status values
+2025-09-21 18:34:37 | ERROR    | web_app:validate_data:149 - Error validating data: Object of type int64 is not JSON serializable
+2025-09-21 18:39:17 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:39:17 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:39:17 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 18:39:17 | ERROR    | web_app:data_quality_report:103 - Error getting data quality report: Object of type ObjectDType is not JSON serializable
+2025-09-21 18:39:55 | INFO     | web_app:update_order:352 - Order 59974 updated successfully
+2025-09-21 18:50:23 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:50:23 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:50:23 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 18:50:23 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 18:50:23 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 18:50:23 | ERROR    | web_app:check_duplicates:118 - Error checking duplicates: Object of type int64 is not JSON serializable
+2025-09-21 18:50:25 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:50:25 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:50:26 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:50:26 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:50:26 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 18:50:26 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4908 extreme shipping_cost values (>1000)
+2025-09-21 18:50:26 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5501 invalid status values
+2025-09-21 18:50:26 | ERROR    | web_app:validate_data:149 - Error validating data: Object of type int64 is not JSON serializable
+2025-09-21 18:50:44 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:50:44 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:50:44 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 18:50:44 | ERROR    | web_app:data_quality_report:103 - Error getting data quality report: Object of type ObjectDType is not JSON serializable
+2025-09-21 18:50:51 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:50:51 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:50:51 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 18:50:51 | ERROR    | web_app:data_quality_report:103 - Error getting data quality report: Object of type ObjectDType is not JSON serializable
+2025-09-21 18:52:39 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:52:39 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:52:52 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:52:52 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:53:03 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:53:03 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:53:07 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:53:08 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:53:28 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:53:28 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:53:28 | INFO     | src.services.order_service:get_data_quality_report:294 - Data quality report generated successfully
+2025-09-21 18:53:28 | ERROR    | web_app:data_quality_report:115 - Error getting data quality report: Object of type ObjectDType is not JSON serializable
+2025-09-21 18:53:30 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:53:30 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:53:30 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 18:53:30 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 18:53:30 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 18:53:32 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:53:32 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:53:34 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:53:34 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:53:34 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 18:53:34 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4908 extreme shipping_cost values (>1000)
+2025-09-21 18:53:34 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5501 invalid status values
+2025-09-21 18:53:46 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:53:46 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:54:07 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:54:07 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:54:13 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:54:14 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:54:35 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:54:35 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:54:35 | INFO     | src.services.order_service:get_data_quality_report:323 - Data quality report generated successfully
+2025-09-21 18:54:35 | ERROR    | web_app:data_quality_report:115 - Error getting data quality report: Object of type ObjectDType is not JSON serializable
+2025-09-21 18:54:37 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:54:37 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:54:37 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 18:54:37 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 18:54:37 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 18:54:39 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:54:39 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:54:42 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:54:42 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:54:42 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 18:54:42 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4908 extreme shipping_cost values (>1000)
+2025-09-21 18:54:42 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5501 invalid status values
+2025-09-21 18:54:57 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:54:57 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:55:28 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:55:28 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:55:28 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-21 18:57:55 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:57:55 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:57:55 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-21 18:57:56 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:57:56 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:57:56 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-21 18:58:03 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:58:03 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:58:03 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-21 18:58:09 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:58:09 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:58:09 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-21 18:58:14 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:58:14 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:58:14 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-21 18:58:29 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:58:31 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:58:42 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:58:43 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:58:46 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-21 18:59:07 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:59:07 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:59:07 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 18:59:07 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 18:59:07 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 18:59:27 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:59:27 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:59:27 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 18:59:27 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 18:59:27 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 18:59:28 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:59:28 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:59:28 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 18:59:28 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 18:59:28 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 18:59:48 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:59:48 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:59:48 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 18:59:48 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4908 extreme shipping_cost values (>1000)
+2025-09-21 18:59:48 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5501 invalid status values
+2025-09-21 18:59:53 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:59:53 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:59:55 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5501 orders from database
+2025-09-21 18:59:55 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5501 rows and 10 columns
+2025-09-21 18:59:55 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 18:59:55 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 18:59:55 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 19:04:24 | INFO     | web_app:create_order:422 - New order 59976 created successfully
+2025-09-21 19:12:29 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 19:12:29 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 19:12:29 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-21 19:12:30 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 19:12:30 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 19:12:30 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-21 19:54:34 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 19:54:34 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 19:54:34 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-21 19:54:44 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 19:54:44 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 19:54:44 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-21 19:54:47 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 19:54:47 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 19:54:48 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 19:54:48 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 19:54:48 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 20:04:33 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 20:04:33 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 20:04:33 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-21 20:04:37 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 20:04:37 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 20:04:37 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 20:04:37 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 20:04:37 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 20:04:39 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 20:04:39 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 20:04:40 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 20:04:40 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 20:04:40 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 20:04:40 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4909 extreme shipping_cost values (>1000)
+2025-09-21 20:04:40 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5502 invalid status values
+2025-09-21 20:05:14 | INFO     | web_app:update_order:370 - Order 59974 updated successfully
+2025-09-21 20:18:11 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 20:18:11 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 20:18:11 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 20:18:11 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 20:18:11 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 20:18:14 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 20:18:14 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 20:18:14 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 20:18:14 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4909 extreme shipping_cost values (>1000)
+2025-09-21 20:18:14 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5502 invalid status values
+2025-09-21 20:18:24 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 20:18:24 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 20:18:31 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 20:18:31 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 20:18:31 | WARNING  | src.services.order_service:clean_duplicate_orders:69 - Found 2 duplicate orders
+2025-09-21 20:18:31 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Grant Carroll, Date=2011-11-25, Category=Office Supplies
+2025-09-21 20:18:31 | WARNING  | src.services.order_service:clean_duplicate_orders:73 - Duplicate: Customer=Sylvia Foulston, Date=2009-01-16, Category=Office Supplies
+2025-09-21 20:18:36 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5502 orders from database
+2025-09-21 20:18:36 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5502 rows and 10 columns
+2025-09-21 20:18:36 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
+2025-09-21 20:18:36 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4909 extreme shipping_cost values (>1000)
+2025-09-21 20:18:36 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5502 invalid status values
