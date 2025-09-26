@@ -23,20 +23,32 @@ def convert_pandas_types(obj):
     import numpy as np
     import pandas as pd
     
-    if isinstance(obj, (np.integer, np.int64, np.int32)):
+    if isinstance(obj, (np.integer, np.int64, np.int32, np.int16, np.int8)):
         return int(obj)
-    elif isinstance(obj, (np.floating, np.float64, np.float32)):
+    elif isinstance(obj, (np.floating, np.float64, np.float32, np.float16)):
         return float(obj)
+    elif isinstance(obj, np.bool_):
+        return bool(obj)
     elif isinstance(obj, np.ndarray):
         return obj.tolist()
     elif isinstance(obj, pd.Series):
         return obj.tolist()
+    elif isinstance(obj, pd.DataFrame):
+        return obj.to_dict('records')
+    elif hasattr(obj, 'dtype') and hasattr(obj, 'item'):
+        # Para tipos de pandas específicos
+        try:
+            return obj.item()
+        except (ValueError, AttributeError):
+            return str(obj)
     elif hasattr(obj, 'dtype'):
         return str(obj)
     elif isinstance(obj, dict):
         return {k: convert_pandas_types(v) for k, v in obj.items()}
     elif isinstance(obj, list):
         return [convert_pandas_types(item) for item in obj]
+    elif isinstance(obj, tuple):
+        return tuple(convert_pandas_types(item) for item in obj)
     else:
         return obj
 
@@ -85,19 +97,25 @@ def dashboard_stats():
         """
         year_stats = db_connection.execute_query(year_query)
         
-        return jsonify({
-            'total_orders': total_orders,
-            'status_distribution': {item['status']: item['count'] for item in status_stats},
-            'category_distribution': {item['category']: item['count'] for item in category_stats},
+        # Preparar datos para respuesta
+        response_data = {
+            'total_orders': int(total_orders),
+            'status_distribution': {item['status']: int(item['count']) for item in status_stats},
+            'category_distribution': {item['category']: int(item['count']) for item in category_stats},
             'category_revenue': {item['category']: float(item['total_amount']) for item in category_stats},
             'yearly_stats': [
                 {
                     'year': int(item['year']),
-                    'orders': item['count'],
+                    'orders': int(item['count']),
                     'revenue': float(item['total_amount'])
                 } for item in year_stats
             ]
-        })
+        }
+        
+        # Convertir tipos de pandas/numpy
+        response_data = convert_pandas_types(response_data)
+        
+        return jsonify(response_data)
     except Exception as e:
         logger.error(f"Error getting dashboard stats: {e}")
         return jsonify({'error': str(e)}), 500
@@ -138,13 +156,16 @@ def check_incomplete():
     """API endpoint para verificar registros incompletos."""
     try:
         result = order_service.clean_incomplete_records()
-        return jsonify({
-            'total_records': result.total_records,
-            'incomplete_records': result.cleaned_records,
-            'errors': result.errors,
-            'warnings': result.warnings,
+        response_data = {
+            'total_records': int(result.total_records),
+            'incomplete_records': int(result.cleaned_records),
+            'errors': int(result.errors),
+            'warnings': int(result.warnings),
             'summary': result.cleaning_summary
-        })
+        }
+        # Convertir tipos de pandas/numpy
+        response_data = convert_pandas_types(response_data)
+        return jsonify(response_data)
     except Exception as e:
         logger.error(f"Error checking incomplete records: {e}")
         return jsonify({'error': str(e)}), 500

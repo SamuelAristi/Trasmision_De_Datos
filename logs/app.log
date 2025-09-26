@@ -436,3 +436,45 @@ LINE 1: SELECT * FROM orders ORDER BY id
 2025-09-21 20:18:36 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5049 extreme subtotal_amount values (>100,000)
 2025-09-21 20:18:36 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4909 extreme shipping_cost values (>1000)
 2025-09-21 20:18:36 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5502 invalid status values
+2025-09-25 23:32:09 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-25 23:32:10 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-25 23:32:25 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5498 orders from database
+2025-09-25 23:32:25 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5498 rows and 10 columns
+2025-09-25 23:32:25 | INFO     | src.services.order_service:clean_duplicate_orders:86 - No duplicate orders found
+2025-09-25 23:32:37 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5498 orders from database
+2025-09-25 23:32:37 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5498 rows and 10 columns
+2025-09-25 23:32:37 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-25 23:37:29 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-25 23:37:38 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-25 23:37:51 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-25 23:39:22 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-25 23:39:22 | INFO     | __main__:<module>:544 - Starting web application...
+2025-09-25 23:39:24 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-25 23:39:24 | INFO     | __main__:<module>:544 - Starting web application...
+2025-09-25 23:41:01 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5498 orders from database
+2025-09-25 23:41:01 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5498 rows and 10 columns
+2025-09-25 23:41:01 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-25 23:41:43 | INFO     | src.utils.logger:setup_logging:39 - Logging configured successfully
+2025-09-25 23:41:43 | INFO     | __main__:<module>:544 - Starting web application...
+2025-09-25 23:42:13 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5498 orders from database
+2025-09-25 23:42:13 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5498 rows and 10 columns
+2025-09-25 23:42:13 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-25 23:42:26 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5498 orders from database
+2025-09-25 23:42:26 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5498 rows and 10 columns
+2025-09-25 23:42:26 | INFO     | src.services.order_service:clean_duplicate_orders:86 - No duplicate orders found
+2025-09-25 23:42:28 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5498 orders from database
+2025-09-25 23:42:28 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5498 rows and 10 columns
+2025-09-25 23:42:30 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5498 orders from database
+2025-09-25 23:42:30 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5498 rows and 10 columns
+2025-09-25 23:42:30 | WARNING  | src.services.order_service:validate_data_types:223 - Found 5045 extreme subtotal_amount values (>100,000)
+2025-09-25 23:42:30 | WARNING  | src.services.order_service:validate_data_types:231 - Found 4905 extreme shipping_cost values (>1000)
+2025-09-25 23:42:30 | WARNING  | src.services.order_service:validate_data_types:240 - Found 5498 invalid status values
+2025-09-25 23:42:39 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5498 orders from database
+2025-09-25 23:42:39 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5498 rows and 10 columns
+2025-09-25 23:42:39 | INFO     | src.services.order_service:clean_duplicate_orders:86 - No duplicate orders found
+2025-09-25 23:42:47 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5498 orders from database
+2025-09-25 23:42:47 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5498 rows and 10 columns
+2025-09-25 23:42:47 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
+2025-09-25 23:42:49 | INFO     | src.services.order_service:get_all_orders:23 - Retrieved 5498 orders from database
+2025-09-25 23:42:49 | INFO     | src.services.order_service:get_orders_dataframe:45 - Created DataFrame with 5498 rows and 10 columns
+2025-09-25 23:42:49 | INFO     | src.services.order_service:get_data_quality_report:342 - Data quality report generated successfully
